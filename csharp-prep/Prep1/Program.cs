@@ -9,12 +9,12 @@ class Program
         string firstName;
         string lastName;
 
-        Console.Write("What is your first name: ");
+        Console.Write("\nWhat is your first name: ");
         firstName = Console.ReadLine();
 
         Console.Write("What is your last name: ");
         lastName = Console.ReadLine();
 
-        Console.WriteLine($"My name is {lastName}, {firstName} {lastName}");
+        Console.WriteLine($"\nYour name is {lastName}, {firstName} {lastName}.\n");
     }
 }
