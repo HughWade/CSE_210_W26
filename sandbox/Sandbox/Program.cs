@@ -1,25 +1,48 @@
 using System;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
 
+    
 
-    public static void firstFunction()
-        {
-        Console.WriteLine("Bob");
-        }
+    // public static void firstFunction()
+    //     {
+    //     Console.WriteLine("Bob");
+    //     }
 
-    public static int addNumbers(int n1, int n2)
-    {
-        return n1+n2;
-    }
+    // public static int addNumbers(int n1, int n2)
+    // {
+    //     return n1+n2;
+    // }
 
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Sandbox World!");
+        Console.WriteLine("Circle");
 
+        Circle myCircle = new Circle();
+
+        myCircle.SetRadius(10);
+
+        Console.WriteLine(myCircle.GetRadius());
+
+    }
+
+    //     public static void passByRef(ref int x)
+    // {
+    //     x++;
+    // }
+
+    
+    // public static void passByRef1(out int y)
+    // {
+    //     y = 10;
+    // }
+
+    
         // firstFunction();
 
         // Console.WriteLine(addNumbers(1,2));
@@ -28,24 +51,24 @@ class Program
         //     Console.WriteLine(i);
         // }
 
-        bool done = false;
+        // bool done = false;
 
-        while (!done)
-        {
-            Console.Write("Please input your age: ");
-            int age1 = int.Parse(Console.ReadLine());
+        // while (!done)
+        // {
+        //     Console.Write("Please input your age: ");
+        //     int age1 = int.Parse(Console.ReadLine());
 
-            if (age1<0)
-            {
-                Console.WriteLine("Please input valid age.");
-            }
+        //     if (age1<0)
+        //     {
+        //         Console.WriteLine("Please input valid age.");
+        //     }
 
-            if (age1>0)
-            {
-                Console.Write("Thanks!");
-                done = true;
-            }
-        }
+        //     if (age1>0)
+        //     {
+        //         Console.Write("Thanks!");
+        //         done = true;
+        //     }
+        // }
 
 
         // List<int> myData = new List<int>();
@@ -64,4 +87,3 @@ class Program
 
     }
     
-}
