@@ -28,6 +28,8 @@ class Program
         myCircle.SetRadius(10);
 
         Console.WriteLine(myCircle.GetRadius());
+        Console.WriteLine(myCircle.GetArea());
+        Console.WriteLine(myCircle.GetDiameter());
 
     }
 
