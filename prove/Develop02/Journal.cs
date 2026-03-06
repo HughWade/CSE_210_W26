@@ -56,8 +56,13 @@ class Journal
 
             Entry entry2 = new Entry();
             entry2.CreateEntryWithData(date, question, entryText);
-            //this.(entry2);
+            this.AddEntry(entry2);
         }
+    }
+
+    public void AddEntry(Entry entry3)
+    {
+        _entries.Add(entry3);
     }
 
 
