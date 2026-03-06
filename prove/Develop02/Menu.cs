@@ -12,7 +12,7 @@ class Menu
         "5 - Quit"
     };
 
-    public int ProcessMenu()
+    public int DisplayMenu()
     {
         int userResponse = 0;
 
