@@ -7,8 +7,8 @@ class Journal
     List<Entry> _entries = new List<Entry>
     {};
 
-    public string _entry;
-
+    //public string _entry;
+    
     public void Response()
     {
         Entry entry1 = new Entry();

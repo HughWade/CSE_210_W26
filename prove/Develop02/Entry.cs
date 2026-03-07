@@ -26,7 +26,12 @@ class Entry
         
         List<string> promptList = new List<string>
         {
-          "Hello", "Goodbye", // create list!!! 
+          "What is one profound lesson you learned today?", 
+          "What is something you think you can improve about yourself?",
+          "Who is someone you look up to and why?",
+          "What gave you motivation to wake up today?",
+          "What was the best part about your day?",
+          "What is something you are looking forward to?"
         };
 
 

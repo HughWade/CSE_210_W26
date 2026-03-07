@@ -18,7 +18,6 @@ class Menu
 
         do
         {
-        Console.Clear();
         foreach(string line in _menuStrings)
         {
             Console.WriteLine(line);
