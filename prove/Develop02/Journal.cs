@@ -57,7 +57,7 @@ class Journal
             string entryText = parts[2];
 
             Entry entry2 = new Entry();
-            entry2.CreateEntryWithData(date, question, entryText);
+            entry2 = entry2.CreateEntryWithData(date, question, entryText);
             this.AddEntry(entry2);
         }
     }

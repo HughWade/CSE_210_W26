@@ -50,12 +50,12 @@ class Entry
         return outputString;
     }
     
-    public Entry CreateEntryWithData(string date1, string question1, string entryText1)
+    public Entry CreateEntryWithData(string date, string question, string entryText)
     {
         Entry entry1 = new Entry();
-        entry1._dateTime = date1;
-        entry1._prompt = question1;
-        entry1._response = entryText1;
+        entry1._dateTime = date;
+        entry1._prompt = question;
+        entry1._response = entryText;
         return entry1;
     }
 }
