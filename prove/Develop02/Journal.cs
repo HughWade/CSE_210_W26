@@ -23,7 +23,9 @@ class Journal
     {
         foreach (Entry entry in _entries)
         {
-            Console.WriteLine(entry);
+            Console.Write(entry._dateTime); Console.Write(" - ");
+            Console.Write(entry._prompt); Console.Write(": ");
+            Console.WriteLine(entry._response);
         }
     }
 
