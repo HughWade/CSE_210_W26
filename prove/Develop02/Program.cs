@@ -12,6 +12,8 @@ class Program
 
         int userResponse;
 
+        int totaltimes = 1;
+
         do
         {
             userResponse = menu.DisplayMenu();
@@ -20,6 +22,8 @@ class Program
 
             {
                 case 1:
+                Console.WriteLine($"Journal Entry #{totaltimes}:");
+                totaltimes += 1;
                 journal1.Response();
                 break;
 

@@ -1,10 +1,12 @@
 class Menu
 {
     
+
     public string[] _menuStrings =
     {
+        "",
         "Welcome to the Journal Program",
-        "Create, Display, Save, and Load Journal Entries",
+        "Please select an option by typing a number, 1-5, in the terminal below:",
         "1 - Create Journal Entry",
         "2 - Display Journal",
         "3 - Save Journal to file",
