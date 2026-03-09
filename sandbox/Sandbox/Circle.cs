@@ -1,7 +1,19 @@
 class Circle
 {
-    public double _radius;
+    private double _radius;
 
+    
+    public Circle ()
+    {
+        _radius = 0;
+    }
+
+    public Circle (double radius)
+    {
+        _radius = radius;
+    }
+    
+    
     public double GetRadius()
     {
         return _radius;
@@ -9,6 +21,12 @@ class Circle
 
     public void SetRadius(double radius)
     {
+        if (radius < 0)
+        {
+            Console.WriteLine("Invalid radius input, less than zero.");
+        }
+        
+        else
         _radius = radius;
     }
 
