@@ -1,56 +1,57 @@
 class Fraction
 
 {
-    private int _topnum;
-    private int _bottomnum;
+    private double _topnum;
+    private double _bottomnum;
 
     public Fraction()
     {
         _topnum = 1;
         _bottomnum = 1;
-        GetFraction();
     }
+
 
     public Fraction (int wholenum)
     {
         _topnum = wholenum;
         _bottomnum = 1;
-        GetFraction();
     }
 
     public Fraction (int topnumber, int bottomnumber)
     {
         _topnum = topnumber;
         _bottomnum = bottomnumber;
-        GetFraction();
     }
 
-    public void GetTop()
+    public double GetTop()
     {
-        Console.WriteLine($"Top Value: {_topnum}");
-        GetFraction();
+        return _topnum;
     }
 
-    public void GetBottom()
+    public double GetBottom()
     {
-        Console.WriteLine($"Bottom Value: {_bottomnum}");
-        GetFraction();
+        return _bottomnum;
     }
 
     public void SetTop(int NewTop)
     {
         _topnum = NewTop;
-        GetFraction();
     }
 
     public void SetBottom(int NewBottom)
     {
         _bottomnum = NewBottom;
-        GetFraction();
     }
 
-    public void GetFraction()
+    public string GetFractionString()
     {
-        Console.WriteLine($"{_topnum}/{_bottomnum}");
+        string stringtoreturn = $"{_topnum}/{_bottomnum}";
+        return stringtoreturn;
+    }
+
+    public double GetDecimalValue()
+    {
+        double decimaltoreturn = _topnum / _bottomnum;
+        return decimaltoreturn;
     }
 }
