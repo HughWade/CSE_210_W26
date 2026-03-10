@@ -1,8 +1,8 @@
 class Fraction
 
 {
-    private double _topnum;
-    private double _bottomnum;
+    private int _topnum;
+    private int _bottomnum;
 
     public Fraction()
     {
@@ -23,12 +23,12 @@ class Fraction
         _bottomnum = bottomnumber;
     }
 
-    public double GetTop()
+    public int GetTop()
     {
         return _topnum;
     }
 
-    public double GetBottom()
+    public int GetBottom()
     {
         return _bottomnum;
     }
@@ -51,7 +51,7 @@ class Fraction
 
     public double GetDecimalValue()
     {
-        double decimaltoreturn = _topnum / _bottomnum;
-        return decimaltoreturn;
+        return (double) _topnum / _bottomnum;
+        
     }
 }
