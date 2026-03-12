@@ -6,8 +6,13 @@ class Reference
     private int _endVerse;
 
 
-public Reference()
-    {}
+public Reference() //default reference is for Ether 12:27
+    {
+        _book = "Ether";
+        _chapter = 12;
+        _startVerse = 27;
+
+    }
 
 public Reference(string book, int chapter, int startVerse)
     {
