@@ -45,13 +45,68 @@ public Scripture(string scripture)
     }
 
 
-public string DisplayScripture(List<string> listScripture, List<int> numberList, int wordsToHide)
+public void DisplayScripture(List<string> listScripture, List<int> numberList, int wordsToHide)
     {
         Random newRandom = new Random();
+        
+        string myInput = "";
 
+        while (myInput == "" && myInput != "quit")
+
+        {
+
+            if (numberList.Count > wordsToHide)
+            {
+                for (int i = 0; i<wordsToHide; i++)
+                {
+                    int rando = newRandom.Next(numberList.Count);
+                    int wordIndex = numberList[rando];
+                    string word = listScripture[wordIndex];
+                    Word wordInstance = new Word(word);
+
+                    listScripture[wordIndex] = wordInstance.returnUnderscores();
+
+                    numberList.Remove(rando);
+                    
+                }
+
+
+                foreach (string item in listScripture)
+                {
+                    Console.Write(item);
+                    Console.Write(" ");
+                }
+
+                Console.WriteLine("");
+                myInput = Console.ReadLine();
+
+            }
+
+            else
+            {
+                for (int i = 0; i<numberList.Count; i++)
+                {
+                    int wordIndex = numberList[i];
+                    string word = listScripture[wordIndex];
+                    Word wordInstance = new Word(word);
+
+                    listScripture[wordIndex] = wordInstance.returnUnderscores();
+
+                }
+
+
+                foreach (string item in listScripture)
+                {
+                    Console.Write(item);
+                    Console.Write(" ");
+                }
+
+                Console.WriteLine("");
+                myInput = "quit";
+            }
         
-        
-        return "";
+        }
+
     }
 
 }

@@ -5,9 +5,13 @@ class Word
     
     public Word (string hiddenWord)
     {
-        StringToBlank(hiddenWord);
+        hiddenWord = _hiddenWord;
     }
 
+    public string returnUnderscores()
+    {
+        return StringToBlank(_hiddenWord);
+    }
 
     private string StringToBlank(string myString)
     {
