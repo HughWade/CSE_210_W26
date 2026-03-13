@@ -9,6 +9,7 @@ class Scripture
     private int _wordsToHide;
     private string _defaultScripture = "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them.";
 
+    private string _scripture;
 
 private void TurnStringToList(string scripture)
     {
@@ -36,6 +37,8 @@ private void CreateNumberList(int integer)
 
 public Scripture()
     {
+        _scripture = _defaultScripture;
+
         TurnStringToList(_defaultScripture);
 
         CreateNumberList(_listScripture.Count());
@@ -44,6 +47,8 @@ public Scripture()
 
 public Scripture(string scripture)
     {
+        _scripture = scripture;
+
         TurnStringToList(scripture);
 
         CreateNumberList(_listScripture.Count());
@@ -73,7 +78,7 @@ public void DisplayScripture(int wordsToHide)
 
                     _listScripture[wordIndex] = wordInstance.returnUnderscores();
 
-                    _numberList.Remove(rando);
+                    _numberList.Remove(wordIndex);
                     
                 }
 
@@ -86,6 +91,13 @@ public void DisplayScripture(int wordsToHide)
 
                 Console.WriteLine("");
                 myInput = Console.ReadLine();
+
+                if (myInput == "")
+                {
+                    Console.WriteLine(_scripture);
+                    Console.WriteLine("");
+                    myInput = Console.ReadLine();
+                }
 
             }
 
@@ -106,6 +118,16 @@ public void DisplayScripture(int wordsToHide)
                 {
                     Console.Write(item);
                     Console.Write(" ");
+                }
+
+                Console.WriteLine();
+                myInput = Console.ReadLine();
+
+                if (myInput == "")
+                {
+                    Console.WriteLine(_scripture);
+                    Console.WriteLine("");
+                    myInput = Console.ReadLine();
                 }
 
                 Console.WriteLine("");
