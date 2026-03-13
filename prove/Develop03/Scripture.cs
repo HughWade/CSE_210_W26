@@ -12,20 +12,26 @@ class Scripture
 
 private void TurnStringToList(string scripture)
     {
+        List<string> strings = new List<string>();
         string[] tempWords = scripture.Split();
         foreach (string word in tempWords)
         {
-            _listScripture.Add(word);
+            strings.Add(word);
         }
+
+        _listScripture = strings;
 
     }
 
 private void CreateNumberList(int integer)
     {
+        List<int> ints = new List<int>();
         for (int i = 0; i < integer; i++)
         {
-            _numberList.Add(i);
+            ints.Add(i);
         }
+
+        _numberList = ints;
     }
 
 public Scripture()
