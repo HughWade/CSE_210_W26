@@ -16,17 +16,17 @@ public Reference() //default reference is for Ether 12:27
 
 public Reference(string book, int chapter, int startVerse)
     {
-        book = _book;
-        chapter = _chapter;
-        startVerse = _startVerse;       
+        _book = book;
+        _chapter = chapter;
+        _startVerse = startVerse;       
     }
 
 public Reference(string book, int chapter, int startVerse, int endVerse)
     {
-        book = _book;
-        chapter = _chapter;
-        startVerse = _startVerse;
-        endVerse = _endVerse;       
+        _book = book;
+        _chapter = chapter;
+        _startVerse = startVerse;
+        _endVerse = endVerse;       
     }
 
 public string DisplayReference()

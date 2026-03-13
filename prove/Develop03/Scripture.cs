@@ -5,7 +5,6 @@ class Scripture
 {
     
     private List<string> _listScripture;
-    private string _scripture;
     private List<int> _numberList;
     private int _wordsToHide;
     private string _defaultScripture = "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them.";
@@ -45,8 +44,10 @@ public Scripture(string scripture)
     }
 
 
-public void DisplayScripture(List<string> listScripture, List<int> numberList, int wordsToHide)
+public void DisplayScripture(int wordsToHide)
     {
+        _wordsToHide = wordsToHide;
+
         Random newRandom = new Random();
         
         string myInput = "";
@@ -55,23 +56,23 @@ public void DisplayScripture(List<string> listScripture, List<int> numberList, i
 
         {
 
-            if (numberList.Count > wordsToHide)
+            if (_numberList.Count > _wordsToHide)
             {
-                for (int i = 0; i<wordsToHide; i++)
+                for (int i = 0; i<_wordsToHide; i++)
                 {
-                    int rando = newRandom.Next(numberList.Count);
-                    int wordIndex = numberList[rando];
-                    string word = listScripture[wordIndex];
+                    int rando = newRandom.Next(_numberList.Count);
+                    int wordIndex = _numberList[rando];
+                    string word = _listScripture[wordIndex];
                     Word wordInstance = new Word(word);
 
-                    listScripture[wordIndex] = wordInstance.returnUnderscores();
+                    _listScripture[wordIndex] = wordInstance.returnUnderscores();
 
-                    numberList.Remove(rando);
+                    _numberList.Remove(rando);
                     
                 }
 
 
-                foreach (string item in listScripture)
+                foreach (string item in _listScripture)
                 {
                     Console.Write(item);
                     Console.Write(" ");
@@ -84,18 +85,18 @@ public void DisplayScripture(List<string> listScripture, List<int> numberList, i
 
             else
             {
-                for (int i = 0; i<numberList.Count; i++)
+                for (int i = 0; i<_numberList.Count; i++)
                 {
-                    int wordIndex = numberList[i];
-                    string word = listScripture[wordIndex];
+                    int wordIndex = _numberList[i];
+                    string word = _listScripture[wordIndex];
                     Word wordInstance = new Word(word);
 
-                    listScripture[wordIndex] = wordInstance.returnUnderscores();
+                    _listScripture[wordIndex] = wordInstance.returnUnderscores();
 
                 }
 
 
-                foreach (string item in listScripture)
+                foreach (string item in _listScripture)
                 {
                     Console.Write(item);
                     Console.Write(" ");

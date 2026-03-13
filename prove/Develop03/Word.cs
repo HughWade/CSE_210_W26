@@ -5,7 +5,7 @@ class Word
     
     public Word (string hiddenWord)
     {
-        hiddenWord = _hiddenWord;
+        _hiddenWord = hiddenWord;
     }
 
     public string returnUnderscores()
