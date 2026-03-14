@@ -35,6 +35,8 @@ private void CreateNumberList(int integer)
         _numberList = ints;
     }
 
+
+
 public Scripture()
     {
         _scripture = _defaultScripture;
@@ -66,9 +68,25 @@ public void DisplayScripture(int wordsToHide)
         while (myInput == "" && myInput != "quit")
 
         {
-
-            if (_numberList.Count > _wordsToHide)
+            
+            if (myInput == "quit")
             {
+                break;
+            }
+            
+            Console.Clear();
+            Console.WriteLine(_scripture);
+            Console.WriteLine("");
+            myInput = Console.ReadLine();
+
+            if (myInput == "quit")
+            {
+                break;
+            }
+
+            if (_numberList.Count > _wordsToHide && (myInput == "" || myInput != "quit"))
+            {
+                Console.Clear();
                 for (int i = 0; i<_wordsToHide; i++)
                 {
                     int rando = newRandom.Next(_numberList.Count);
@@ -92,17 +110,17 @@ public void DisplayScripture(int wordsToHide)
                 Console.WriteLine("");
                 myInput = Console.ReadLine();
 
-                if (myInput == "")
+                if (myInput == "quit")
                 {
-                    Console.WriteLine(_scripture);
-                    Console.WriteLine("");
-                    myInput = Console.ReadLine();
+                break;
                 }
+
 
             }
 
-            else
+            if (_numberList.Count <= _wordsToHide && (myInput == "" || myInput != "quit"))
             {
+                Console.Clear();
                 for (int i = 0; i<_numberList.Count; i++)
                 {
                     int wordIndex = _numberList[i];
@@ -123,12 +141,11 @@ public void DisplayScripture(int wordsToHide)
                 Console.WriteLine();
                 myInput = Console.ReadLine();
 
-                if (myInput == "")
+                if (myInput == "quit")
                 {
-                    Console.WriteLine(_scripture);
-                    Console.WriteLine("");
-                    myInput = Console.ReadLine();
+                break;
                 }
+
 
                 Console.WriteLine("");
                 myInput = "quit";
