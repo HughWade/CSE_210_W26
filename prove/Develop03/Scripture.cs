@@ -11,6 +11,8 @@ class Scripture
 
     private string _scripture;
 
+
+
 private void TurnStringToList(string scripture)
     {
         List<string> strings = new List<string>();
@@ -57,7 +59,7 @@ public Scripture(string scripture)
     }
 
 
-public void DisplayScripture(int wordsToHide)
+public void DisplayScripture(int wordsToHide, Reference reference1)
     {
         _wordsToHide = wordsToHide;
 
@@ -75,6 +77,7 @@ public void DisplayScripture(int wordsToHide)
             }
             
             Console.Clear();
+            Console.WriteLine(reference1.DisplayReference());
             Console.WriteLine(_scripture);
             Console.WriteLine("");
             myInput = Console.ReadLine();
@@ -100,7 +103,7 @@ public void DisplayScripture(int wordsToHide)
                     
                 }
 
-
+                Console.WriteLine(reference1.DisplayReference());
                 foreach (string item in _listScripture)
                 {
                     Console.Write(item);
@@ -131,7 +134,7 @@ public void DisplayScripture(int wordsToHide)
 
                 }
 
-
+                Console.WriteLine(reference1.DisplayReference());
                 foreach (string item in _listScripture)
                 {
                     Console.Write(item);

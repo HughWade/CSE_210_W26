@@ -38,7 +38,7 @@ public string DisplayReference()
 
         else
         {
-            return $"{_book} Chapter {_chapter}, Verse {_startVerse}";
+        return $"{_book} Chapter {_chapter}, Verse {_startVerse}";
         }
     }
 
