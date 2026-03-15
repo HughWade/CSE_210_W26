@@ -124,6 +124,18 @@ public void DisplayScripture(int wordsToHide, Reference reference1)
             if (_numberList.Count <= _wordsToHide && (myInput == "" || myInput != "quit"))
             {
                 Console.Clear();
+                Console.WriteLine(reference1.DisplayReference());
+                Console.WriteLine(_scripture);
+                Console.WriteLine("");
+                myInput = Console.ReadLine();
+
+                if (myInput == "quit")
+                {
+                    break;
+                }
+
+                if (myInput != "quit")
+                {
                 for (int i = 0; i<_numberList.Count; i++)
                 {
                     int wordIndex = _numberList[i];
@@ -134,6 +146,7 @@ public void DisplayScripture(int wordsToHide, Reference reference1)
 
                 }
 
+                Console.Clear();
                 Console.WriteLine(reference1.DisplayReference());
                 foreach (string item in _listScripture)
                 {
@@ -143,15 +156,20 @@ public void DisplayScripture(int wordsToHide, Reference reference1)
 
                 Console.WriteLine();
                 myInput = Console.ReadLine();
+                }
 
                 if (myInput == "quit")
                 {
                 break;
                 }
 
-
-                Console.WriteLine("");
+                else
+                {
+                Console.Clear();
+                Console.WriteLine(reference1.DisplayReference());
+                Console.WriteLine(_scripture);
                 myInput = "quit";
+                }
             }
         
         }
