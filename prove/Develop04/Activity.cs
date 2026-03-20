@@ -1,3 +1,5 @@
+using System.Globalization;
+
 class Activity
 {
 
@@ -5,10 +7,27 @@ private string _activityName;
 private string _description;
 private int _seconds;
 
-public Activity(string name, string description)
+public Activity()
+    {}
+
+public void SetActivityName(string activity)
     {
-        _activityName = name;
+        _activityName = activity;
+    }
+
+public string GetActivityName()
+    {
+        return _activityName;
+    }
+
+public void SetDescription(string description)
+    {
         _description = description;
+    }
+
+public string GetDescription()
+    {
+        return _description;
     }
 
 public void SetSeconds(int seconds)
@@ -24,6 +43,10 @@ public int GetSeconds()
 public void DisplayWelcome()
     {
         Console.WriteLine($"Welcome to the {_activityName} Activity!\n{_description}");
+        Console.WriteLine("Requested Activity Duration in Seconds: ");
+        int num1 = int.Parse(Console.ReadLine());
+        SetSeconds(num1); 
+        DisplayLoading("Prepare to begin", 1);
     }
 
 public void DisplayEnding()
@@ -55,6 +78,8 @@ public void DisplayLoading(string message, int seconds)
             Console.Write("/");
             Thread.Sleep(250);
             Console.Write("\b");
+
+            CurrentTime = DateTime.Now;
         }
     
     }

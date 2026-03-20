@@ -11,16 +11,17 @@ class Program
         switch(number)
         {
             case 1:
-            Activity activity1 = new Activity("Breathing", "");
+            Breathing breathing1 = new Breathing();
+            breathing1.Go();
             break;
 
-            case 2:
-            Activity activity2 = new Activity("Reflecting", "");
-            break;
+            // case 2:
+            // Activity activity2 = new Activity("Reflecting", "");
+            // break;
 
-            case 3:
-            Activity activity3 = new Activity("Listing", "");
-            break;
+            // case 3:
+            // Activity activity3 = new Activity("Listing", "");
+            // break;
 
 
 
