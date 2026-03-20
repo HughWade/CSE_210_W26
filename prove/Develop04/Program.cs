@@ -15,9 +15,10 @@ class Program
             breathing1.Go();
             break;
 
-            // case 2:
-            // Activity activity2 = new Activity("Reflecting", "");
-            // break;
+            case 2:
+            Reflection reflection1 = new Reflection();
+            reflection1.Go();
+            break;
 
             // case 3:
             // Activity activity3 = new Activity("Listing", "");
