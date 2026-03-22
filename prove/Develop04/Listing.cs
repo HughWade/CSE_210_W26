@@ -27,7 +27,11 @@ class Listing : Activity
         Random promptSelection1 = new Random();
         int promptNum = promptSelection1.Next(PromptList1.Count);
         string toDisplay = PromptList1[promptNum];
-        Console.WriteLine($"PROMPT:\n{toDisplay}\nPlease write down responses to this. Press [Enter] after each entry.");
+        Console.WriteLine("PROMPT:");
+        SleepSeconds(1.5);
+        Console.WriteLine($"{toDisplay}");
+        SleepSeconds(3);
+        DisplayCountdown("Please write down responses to this. Press [Enter] after each entry....", 8);
 
     
         DateTime CurrentTime = DateTime.Now;
