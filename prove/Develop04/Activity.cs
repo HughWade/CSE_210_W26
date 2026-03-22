@@ -42,26 +42,25 @@ public int GetSeconds()
 
 public void DisplayWelcome()
     {
+        Console.WriteLine();
         Console.WriteLine($"Welcome to the {_activityName} Activity!\n{_description}");
         Console.Write("Requested Activity Duration in Seconds: ");
         int num1 = int.Parse(Console.ReadLine());
         SetSeconds(num1); 
-        DisplayLoading("Prepare to begin", 5);
+        DisplayLoading("Prepare to begin......", 5);
     }
 
 
-public void SleepSeconds(int num)
+public void SleepSeconds(double num)
     {
-        Thread.Sleep(num * 1000);
+        Thread.Sleep(TimeSpan.FromSeconds(num));
     }
 
 public void DisplayEnding()
     {
         Console.WriteLine("");
-        Console.WriteLine($"Great Job! You completed the {_activityName} Activity!");
-        SleepSeconds(3);
-        Console.WriteLine($"You completed the {_activityName} activity for about {_seconds} seconds.");
-        SleepSeconds(3);
+        DisplayLoading($"Great Job! You completed the {_activityName} Activity!",3);
+        DisplayLoading($"You completed the {_activityName} activity for about {_seconds} seconds.", 3);
     }
 
 public void DisplayLoading(string message, int seconds)
@@ -69,31 +68,49 @@ public void DisplayLoading(string message, int seconds)
         DateTime CurrentTime = DateTime.Now;
         DateTime endTime = CurrentTime.AddSeconds(seconds);
 
-        Console.WriteLine($"{message}..............");
+        Console.Write($"{message}");
 
         while (CurrentTime < endTime)
         {
             Console.Write("-");
-            Thread.Sleep(250);
+            SleepSeconds(0.25);
             Console.Write("\b");
 
             Console.Write("\\");
-            Thread.Sleep(250);
+            SleepSeconds(0.25);
             Console.Write("\b");
 
             Console.Write("|");
-            Thread.Sleep(250);
+            SleepSeconds(0.25);
             Console.Write("\b");
             
             Console.Write("/");
-            Thread.Sleep(250);
+            SleepSeconds(0.25);
             Console.Write("\b");
 
             CurrentTime = DateTime.Now;
         }
-    
+        Console.WriteLine();
     }
 
+public void DisplayCountdown(string message, int seconds)
+    {
+        DateTime CurrentTime = DateTime.Now;
+        DateTime endTime = CurrentTime.AddSeconds(seconds);
+
+        Console.Write($"{message}");
+
+        while (CurrentTime < endTime)
+        {
+            Console.Write($"{seconds}");
+            SleepSeconds(1);
+            seconds -= 1;
+            Console.Write("\b");
+            CurrentTime = DateTime.Now;
+            
+        }
+        Console.WriteLine();
+    }
 
 
 }
