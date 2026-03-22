@@ -22,6 +22,13 @@ private void BreathingGuts()
     while (CurrentTime < endTime)
         {
             DisplayCountdown("Breathe in..........", 4);
+            CurrentTime = DateTime.Now;
+
+            if (CurrentTime > endTime)
+            {
+                break;
+            }
+            
             DisplayCountdown("Breathe out..........", 4);
             CurrentTime = DateTime.Now;
 
