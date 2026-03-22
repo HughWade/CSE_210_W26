@@ -60,7 +60,7 @@ public void DisplayEnding()
     {
         Console.WriteLine("");
         DisplayLoading($"Great Job! You completed the {_activityName} Activity!",3);
-        DisplayLoading($"You completed the {_activityName} activity for about {_seconds} seconds.", 3);
+        DisplayLoading($"You participated in the {_activityName} activity for about {_seconds} seconds.", 3);
     }
 
 public void DisplayLoading(string message, int seconds)
