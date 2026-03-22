@@ -43,7 +43,7 @@ public int GetSeconds()
 public void DisplayWelcome()
     {
         Console.WriteLine();
-        Console.WriteLine($"Welcome to the {_activityName} Activity!\n{_description}");
+        DisplayLoading($"Welcome to the {_activityName} Activity!\n{_description}",10);
         Console.Write("Requested Activity Duration in Seconds: ");
         int num1 = int.Parse(Console.ReadLine());
         SetSeconds(num1); 

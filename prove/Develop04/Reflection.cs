@@ -42,7 +42,10 @@ class Reflection : Activity
         Random promptSelection = new Random();
         int promptNum = promptSelection.Next(PromptList.Count);
         string toDisplay = PromptList[promptNum];
-        Console.WriteLine($"PROMPT:\n{toDisplay}");
+        Console.WriteLine($"PROMPT:");
+        SleepSeconds(1.5);
+        Console.WriteLine($"{toDisplay}");
+        SleepSeconds(1.5);
 
     
         DateTime CurrentTime = DateTime.Now;
@@ -54,7 +57,7 @@ class Reflection : Activity
         int displayNum = displaySelection.Next(ReflectQuestions.Count);
         string toDisplay2 = ReflectQuestions[displayNum];
 
-        DisplayLoading(toDisplay2, 5);
+        DisplayLoading(toDisplay2, 6);
         
         CurrentTime = DateTime.Now;
 

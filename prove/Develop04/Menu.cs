@@ -2,6 +2,7 @@ class Menu
 {
 public int ProcessMenu()
     {
+        Console.WriteLine();
         Console.WriteLine("Welcome to the Mindfulness Activity Program!\nWhich program would you like to do today?\n1. Breathing Activity\n2. Reflecting Activity\n3. Listing Activity");
         Console.Write("Please input a valid activity number: ");
         string firstString = Console.ReadLine();
