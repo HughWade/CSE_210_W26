@@ -45,7 +45,7 @@ class Reflection : Activity
         Console.WriteLine($"PROMPT:");
         SleepSeconds(1.5);
         Console.WriteLine($"{toDisplay}");
-        SleepSeconds(1.5);
+        SleepSeconds(3);
 
     
         DateTime CurrentTime = DateTime.Now;
@@ -57,7 +57,21 @@ class Reflection : Activity
         int displayNum = displaySelection.Next(ReflectQuestions.Count);
         string toDisplay2 = ReflectQuestions[displayNum];
 
-        DisplayLoading(toDisplay2, 6);
+        TimeSpan subtraction = endTime - CurrentTime;
+        double newsubstraction = subtraction.TotalSeconds;
+        int newnewsub = (int) Math.Floor(newsubstraction);
+        
+        if (newsubstraction>6)
+            {
+                DisplayLoading(toDisplay2, 6);
+            }
+
+        else
+            {
+                DisplayLoading(toDisplay2, newnewsub);
+                break;
+            }
+        
         
         CurrentTime = DateTime.Now;
 
