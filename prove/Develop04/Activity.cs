@@ -46,12 +46,22 @@ public void DisplayWelcome()
         Console.Write("Requested Activity Duration in Seconds: ");
         int num1 = int.Parse(Console.ReadLine());
         SetSeconds(num1); 
-        DisplayLoading("Prepare to begin", 1);
+        DisplayLoading("Prepare to begin", 5);
+    }
+
+
+public void SleepSeconds(int num)
+    {
+        Thread.Sleep(num * 1000);
     }
 
 public void DisplayEnding()
     {
-        Console.WriteLine($"Thank you for participating in the {_activityName} Activity!\nWe hope you come again soon!");
+        Console.WriteLine("");
+        Console.WriteLine($"Great Job! You completed the {_activityName} Activity!");
+        SleepSeconds(3);
+        Console.WriteLine($"You completed the {_activityName} activity for about {_seconds} seconds.");
+        SleepSeconds(3);
     }
 
 public void DisplayLoading(string message, int seconds)
