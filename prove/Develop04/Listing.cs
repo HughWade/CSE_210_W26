@@ -31,7 +31,7 @@ class Listing : Activity
         SleepSeconds(1.5);
         Console.WriteLine($"{toDisplay}");
         SleepSeconds(3);
-        DisplayCountdown("Please write down responses to this. Press [Enter] after each entry....", 8);
+        DisplayCountdown("Please write down responses to the prompt. Press [Enter] after each entry....", 8);
 
     
         DateTime CurrentTime = DateTime.Now;

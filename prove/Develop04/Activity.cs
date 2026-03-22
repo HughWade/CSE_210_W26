@@ -61,6 +61,64 @@ public void DisplayEnding()
         Console.WriteLine("");
         DisplayLoading($"Great Job! You completed the {_activityName} Activity!",3);
         DisplayLoading($"You participated in the {_activityName} activity for about {_seconds} seconds.", 3);
+
+        if (_activityName == "Breathing")
+        {
+           Console.WriteLine();
+           Console.WriteLine("Here's a picture representing the activity\nyou just particiapted in!");
+           SleepSeconds(2);
+           Console.WriteLine();
+           Console.WriteLine(" ------");
+           Console.WriteLine("|      \\");
+           Console.WriteLine("|     O");
+           Console.WriteLine("|     _\\  -------");
+           Console.WriteLine(" |____C-------   -------");
+           Console.WriteLine("             -------");
+           Console.WriteLine();
+        
+        }
+
+        if (_activityName == "Reflection")
+        {
+        Console.WriteLine();
+        Console.WriteLine("Here's a picture representing the activity\nyou just particiapted in!");
+        SleepSeconds(2);
+        Console.WriteLine();
+        Console.WriteLine("            ____");
+        Console.WriteLine("          (     )");
+        Console.WriteLine("        (        )");
+        Console.WriteLine("       ( THOUGHTS )");
+        Console.WriteLine("       (         )");
+        Console.WriteLine("         (______) ");
+        Console.WriteLine("        _");
+        Console.WriteLine("       |_|     ");
+        Console.WriteLine("      O  ");
+        Console.WriteLine("    O");
+        Console.WriteLine();
+        }
+
+        if (_activityName == "Listing")
+        {
+            Console.WriteLine();
+            Console.WriteLine("Here's a picture representing the activity\nyou just particiapted in!");
+            SleepSeconds(2);
+            Console.WriteLine();
+            Console.WriteLine(" ___________");
+            Console.WriteLine(".|          | ");
+            Console.WriteLine(".|  NOTES   |");
+            Console.WriteLine(".|          |   A");
+            Console.WriteLine(".|          |  | |");
+            Console.WriteLine(".|          |  | |");
+            Console.WriteLine(".|          |  |_|");
+            Console.WriteLine(".|__________|  |_|");
+            Console.WriteLine();
+
+
+
+
+
+        }
+
     }
 
 public void DisplayLoading(string message, int seconds)
