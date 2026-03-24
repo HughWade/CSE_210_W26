@@ -1,4 +1,4 @@
-class Shape
+public abstract class Shape
 {
 private string _color;
 
@@ -14,16 +14,13 @@ public void SetColor(string color)
 
 
 public Shape()
-    {
-        
-    }
+    {}
 
 public Shape(string color)
     {
         SetColor(color);
     }
 
-public virtual double GetArea()
-    {return 5.1; }
+public abstract double GetArea();
 
 }

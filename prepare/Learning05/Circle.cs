@@ -1,11 +1,11 @@
 class Circle : Shape
 {
-public int _radius;
+public double _radius;
 
 public Circle()
 {}
 
-public Circle(string color, int radius) : base(color)
+public Circle(string color, double radius) : base(color)
     {
         _radius = radius;
     }

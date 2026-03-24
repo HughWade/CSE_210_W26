@@ -2,11 +2,11 @@ class Square : Shape
 
 {
 
-private int _side;
+private double _side;
 public Square()
 {}
 
-public Square(string color1, int side) : base(color1)
+public Square(string color1, double side) : base(color1)
 {
         _side = side;
 }

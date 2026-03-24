@@ -1,13 +1,13 @@
 class Rectangle : Shape
 {
 
-private int _sideone;
-private int _sidetwo;
+private double _sideone;
+private double _sidetwo;
 
 public Rectangle()
 {}
 
-public Rectangle(string color, int side1, int side2) : base(color)
+public Rectangle(string color, double side1, double side2) : base(color)
     {
         _sideone = side1; _sidetwo = side2;
     }
