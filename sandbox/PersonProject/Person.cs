@@ -18,7 +18,7 @@ class Person
     }
 
 
-    public string GetPersonInformation()
+    public virtual string GetPersonInformation()
     {
         return $"Their name is {_firstname} {_lastname}. They are {_age} years old and weigh {_weight} pounds.";
     }
