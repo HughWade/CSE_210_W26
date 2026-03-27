@@ -8,12 +8,14 @@ public SimpleGoal() : base()
 
 public override void SetPoints()
     {
-        Console.WriteLine("How many points will be assigned to this goal? ");
+        Console.Write("How many points will be assigned to this goal? ");
         _points = int.Parse(Console.ReadLine());
     
     }
 
     public override void DisplayGoal()
-    {}
+    {
+        Console.WriteLine($"Simple Goal - {GetGoalName()} - {GetDescription()} - Points: {GetPoints()} - Completed: {GetStatus()}");
+    }
 
 }

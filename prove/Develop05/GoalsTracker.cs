@@ -13,5 +13,14 @@ class GoalsTracker
         _totalpoints += points;
     }
 
+    public void PrintGoals()
+    {
+        Console.WriteLine("\nGoals List:");
+        foreach (Goal goal in GoalsList)
+        {
+            goal.DisplayGoal();
+        }
+    }
+
 
 }

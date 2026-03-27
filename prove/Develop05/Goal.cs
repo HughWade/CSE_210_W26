@@ -13,9 +13,14 @@ public Goal()
         _status = false;
     }
 
+public bool GetStatus()
+    {
+        return _status;
+    }
+
 public void SetGoalName()
     {
-        Console.WriteLine("Name of Goal: ");
+        Console.Write("Name of Goal: ");
         _name = Console.ReadLine();
     }
 
@@ -26,7 +31,7 @@ public string GetGoalName()
 
 public void SetDescription()
     {
-        Console.WriteLine("Description of Goal: ");
+        Console.Write("Description of Goal: ");
         _description = Console.ReadLine();
     }
 
