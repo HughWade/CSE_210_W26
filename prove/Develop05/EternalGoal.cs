@@ -1,7 +1,7 @@
 class EternalGoal : Goal
 {
 
-private int _timesCompleted;
+private int _timesCompleted = 0;
 public EternalGoal() : base()
 {
       _timesCompleted = 0;  

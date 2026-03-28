@@ -45,6 +45,14 @@ class Menu
             goalsTracker.AppendGoal(eternalGoal1);
             break;
 
+            case 3:
+            CheckListGoal checkListGoal1 = new CheckListGoal();
+            checkListGoal1.SetGoalName();
+            checkListGoal1.SetDescription();
+            checkListGoal1.SetPoints();
+            goalsTracker.AppendGoal(checkListGoal1);
+            break;
+
             
         }
 
