@@ -15,10 +15,15 @@ class GoalsTracker
 
     public void PrintGoals()
     {
+        
+        int numList = 1;
         Console.WriteLine("\nGoals List:");
+        
         foreach (Goal goal in GoalsList)
         {
+            Console.Write($"{numList}. ");
             goal.DisplayGoal();
+            numList += 1;
         }
     }
 
