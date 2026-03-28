@@ -37,9 +37,15 @@ class Menu
             goalsTracker.AppendGoal(simplegoal1);
             break;
 
-            case 7:
-            
+            case 2:
+            EternalGoal eternalGoal1 = new EternalGoal();
+            eternalGoal1.SetGoalName();
+            eternalGoal1.SetDescription();
+            eternalGoal1.SetPoints();
+            goalsTracker.AppendGoal(eternalGoal1);
             break;
+
+            
         }
 
         goalsTracker.PrintGoals();
