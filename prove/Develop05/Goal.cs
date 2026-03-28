@@ -42,6 +42,20 @@ public string GetDescription()
 
 public abstract void SetPoints();
 public abstract void DisplayGoal();
+public string CheckBoxDisplay()
+    {
+        {
+    if (GetStatus() == false)
+        {
+            return "[ ]";
+        }
+
+    else
+        {
+            return "[X]";
+        }
+}
+    }
 
 public int GetPoints()
     {

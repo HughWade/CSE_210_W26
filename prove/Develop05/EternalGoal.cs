@@ -21,7 +21,7 @@ public override void SetPoints()
 
 public override void DisplayGoal()
 {
-    Console.WriteLine($"Eternal Goal - {GetGoalName()} - {GetDescription()} - Points: {GetPoints()} - Times Completed: {GetTimesCompleted()}");
+    Console.WriteLine($"{CheckBoxDisplay()} Eternal Goal - {GetGoalName()} - {GetDescription()} - Points: {GetPoints()} - Times Completed: {GetTimesCompleted()}");
 }
 
 
