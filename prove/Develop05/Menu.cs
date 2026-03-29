@@ -53,6 +53,14 @@ class Menu
             goalsTracker.AppendGoal(checkListGoal1);
             break;
 
+            case 4:
+            Console.Write("What number goal would you like to record an event for? ");
+            int goalEvent = int.Parse(Console.ReadLine());
+            goalEvent -= 1;
+            goalsTracker.GoalsList[goalEvent].RecordEvent();
+            goalsTracker.CalculateTotalPoints(goalsTracker.GoalsList[goalEvent].GetPoints());
+            break;
+
             
         }
 

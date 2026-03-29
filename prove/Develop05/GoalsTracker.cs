@@ -13,6 +13,11 @@ class GoalsTracker
         _totalpoints += points;
     }
 
+    public int GetTotalPoints()
+    {
+        return _totalpoints;
+    }
+
     public void PrintGoals()
     {
         
@@ -25,6 +30,8 @@ class GoalsTracker
             goal.DisplayGoal();
             numList += 1;
         }
+
+        Console.WriteLine($"\nTotal Points: {GetTotalPoints()}");
     }
 
 

@@ -18,6 +18,11 @@ public override void DisplayGoal()
     Console.WriteLine($"{CheckBoxDisplay()} Simple Goal - {GetGoalName()} - {GetDescription()} - Points: {GetPoints()} - Completed: {GetStatus()}");
 }
 
+public override void RecordEvent()
+{
+    SetStatus(true);
+}
+
 
 
 

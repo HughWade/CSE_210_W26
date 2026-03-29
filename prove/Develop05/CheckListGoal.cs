@@ -33,7 +33,17 @@ public override void SetPoints()
 
 public override void DisplayGoal()
 {
-    Console.WriteLine($"{CheckBoxDisplay()} CheckList Goal - {GetGoalName()} - {GetDescription()} - Points each time: {GetPoints()} - Bonus Points for Full Completion: {GetBonusPoints()} - Times Completed: {GetTimesCompleted()} out of {GetCompletionsNeeded()} - Completed: {GetStatus()}");
+    Console.WriteLine($"{CheckBoxDisplay()} CheckList Goal - {GetGoalName()} - {GetDescription()} - \nPoints each time: {GetPoints()} - Bonus Points for Full Completion: {GetBonusPoints()} - Times Completed: {GetTimesCompleted()} out of {GetCompletionsNeeded()} - Completed: {GetStatus()}");
+}
+
+public override void RecordEvent()
+{
+    _timesCompleted+=1;
+    if (_timesCompleted == _completionsNeeded)
+        {
+            SetStatus(true);
+            _points += _bonusPoints;
+        }
 }
 
 }

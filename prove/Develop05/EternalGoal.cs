@@ -23,6 +23,9 @@ public override void DisplayGoal()
 {
     Console.WriteLine($"{CheckBoxDisplay()} Eternal Goal - {GetGoalName()} - {GetDescription()} - Points: {GetPoints()} - Times Completed: {GetTimesCompleted()}");
 }
-
+public override void RecordEvent()
+{
+    _timesCompleted+=1;
+}
 
 }

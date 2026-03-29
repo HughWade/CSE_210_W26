@@ -18,6 +18,11 @@ public bool GetStatus()
         return _status;
     }
 
+public void SetStatus(bool boolean)
+    {
+        _status = boolean;
+    }
+
 public void SetGoalName()
     {
         Console.Write("Name of Goal: ");
@@ -42,6 +47,7 @@ public string GetDescription()
 
 public abstract void SetPoints();
 public abstract void DisplayGoal();
+public abstract void RecordEvent();
 public string CheckBoxDisplay()
     {
         {
