@@ -61,6 +61,14 @@ class Menu
             goalsTracker.CalculateTotalPoints(goalsTracker.GoalsList[goalEvent].GetPoints());
             break;
 
+            case 5:
+            Console.WriteLine("[The feature is not yet complete. Please try again later.]");            
+            break;
+
+            case 6:
+            Console.WriteLine("[The feature is not yet complete. Please try again later.]");
+            break;
+
             
         }
 

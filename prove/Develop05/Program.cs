@@ -11,7 +11,7 @@ class Program
         {
         menu.ProcessMenu();
         
-        if (menu.GetUserChoice() != 7)
+        if (menu.GetUserChoice() >0 && menu.GetUserChoice() <7)
             {
             menu.RunProgram();
             }
