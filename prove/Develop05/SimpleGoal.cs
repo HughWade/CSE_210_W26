@@ -23,6 +23,12 @@ public override void RecordEvent()
     SetStatus(true);
 }
 
+public override string CreateFileSystemString()
+    {
+        string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetStatus()}";
+        return stringToSave;
+    }
+
 
 
 

@@ -34,5 +34,18 @@ class GoalsTracker
         Console.WriteLine($"\nTotal Points: {GetTotalPoints()}");
     }
 
+public void WriteToFile()
+    {
+        Console.Write("File Name: ");
+        string filename = Console.ReadLine();
+        
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach(Goal goal in GoalsList)
+            {
+                outputFile.WriteLine(goal.CreateFileSystemString());
+            }
+        }
+    }
 
 }

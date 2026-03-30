@@ -46,4 +46,11 @@ public override void RecordEvent()
         }
 }
 
+public override string CreateFileSystemString()
+    {
+        string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetBonusPoints()}#{GetTimesCompleted()}#{GetCompletionsNeeded()}#{GetStatus()}";
+        return stringToSave;
+    }
+
+
 }

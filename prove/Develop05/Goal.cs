@@ -1,3 +1,5 @@
+using System.IO.Enumeration;
+
 public abstract class Goal
 {
 private string _name;
@@ -48,6 +50,8 @@ public string GetDescription()
 public abstract void SetPoints();
 public abstract void DisplayGoal();
 public abstract void RecordEvent();
+
+public abstract string CreateFileSystemString();
 public string CheckBoxDisplay()
     {
         {
@@ -67,4 +71,7 @@ public int GetPoints()
     {
         return _points;
     }
+
+
+
 }

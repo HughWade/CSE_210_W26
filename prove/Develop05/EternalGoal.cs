@@ -28,4 +28,10 @@ public override void RecordEvent()
     _timesCompleted+=1;
 }
 
+public override string CreateFileSystemString()
+    {
+        string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetTimesCompleted()}";
+        return stringToSave;
+    }
+
 }

@@ -62,7 +62,7 @@ class Menu
             break;
 
             case 5:
-            Console.WriteLine("[The feature is not yet complete. Please try again later.]");            
+            goalsTracker.WriteToFile();         
             break;
 
             case 6:
