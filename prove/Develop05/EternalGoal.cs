@@ -34,4 +34,13 @@ public override string CreateFileSystemString()
         return stringToSave;
     }
 
+public override void CreateEntryWithData()
+{
+}
+
+public void GetTimesCompletedFromFile(int integer1)
+    {
+        _timesCompleted = integer1;
+    }
+
 }

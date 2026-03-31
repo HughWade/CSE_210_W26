@@ -50,8 +50,25 @@ public string GetDescription()
 public abstract void SetPoints();
 public abstract void DisplayGoal();
 public abstract void RecordEvent();
-
 public abstract string CreateFileSystemString();
+public abstract void CreateEntryWithData();
+public void SetGoalNameFromFile(string string1)
+{
+    _name = string1;
+}
+
+public void SetDescriptionFromFile(string string1)
+    {
+        _description = string1;
+    }
+
+public void SetPointsFromFile(int integer1)
+    {
+        _points = integer1;
+    }
+
+
+
 public string CheckBoxDisplay()
     {
         {

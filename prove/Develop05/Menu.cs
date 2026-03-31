@@ -66,7 +66,7 @@ class Menu
             break;
 
             case 6:
-            Console.WriteLine("[The feature is not yet complete. Please try again later.]");
+            goalsTracker.ReadFromFile();
             break;
 
             

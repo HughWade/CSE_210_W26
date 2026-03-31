@@ -29,6 +29,12 @@ public override string CreateFileSystemString()
         return stringToSave;
     }
 
+public override void CreateEntryWithData()
+{
+}
+
+
+
 
 
 
