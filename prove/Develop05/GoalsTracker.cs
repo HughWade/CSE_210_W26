@@ -1,7 +1,7 @@
 class GoalsTracker
 {
     public List<Goal> GoalsList = new List<Goal>();
-    private int _totalpoints = 0;
+    private int _totalpoints;
 
     public void AppendGoal(Goal goal)
     {
@@ -45,6 +45,8 @@ public void WriteToFile()
             {
                 outputFile.WriteLine(goal.CreateFileSystemString());
             }
+
+            outputFile.WriteLine($"totalpoints#{GetTotalPoints()}");
         }
     }
 
@@ -116,6 +118,11 @@ public void ReadFromFile()
                 }
 
                 GoalsList.Add(checkListGoalGoal);
+
+            if (parts[0] == "totalpoints")
+                {
+                    CalculateTotalPoints(int.Parse(parts[1]));
+                }
             
             }
 
