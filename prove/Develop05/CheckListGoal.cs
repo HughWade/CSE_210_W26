@@ -49,7 +49,7 @@ public override void RecordEvent()
 
 public override string CreateFileSystemString()
     {
-        string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetBonusPoints()}#{GetTimesCompleted()}#{GetCompletionsNeeded()}#{GetStatus()}";
+        string stringToSave = $"CheckList Goal#{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetBonusPoints()}#{GetTimesCompleted()}#{GetCompletionsNeeded()}#{GetStatus()}";
         return stringToSave;
     }
 

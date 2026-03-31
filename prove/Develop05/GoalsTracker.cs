@@ -60,14 +60,14 @@ public void ReadFromFile()
         {
             string[] parts = line.Split("#");
 
-            if (parts[1] == "Simple Goal")
+            if (parts[0] == "Simple Goal")
             {
                 SimpleGoal simpleGoal = new SimpleGoal();
-                simpleGoal.SetGoalNameFromFile(parts[1]);
-                simpleGoal.SetDescriptionFromFile(parts[2]);
-                simpleGoal.SetPointsFromFile(int.Parse(parts[3]));
+                simpleGoal.SetGoalNameFromFile(parts[2]);
+                simpleGoal.SetDescriptionFromFile(parts[3]);
+                simpleGoal.SetPointsFromFile(int.Parse(parts[4]));
                 
-                if (parts[4] == "false")
+                if (parts[5] == "False")
                 {
                     simpleGoal.SetStatus(false);
                 }
@@ -78,35 +78,35 @@ public void ReadFromFile()
 
                 GoalsList.Add(simpleGoal);
 
-            // string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetStatus()}";
+            // string stringToSave = $"Simple Goal#{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetStatus()}";
 
             }
 
-            if (parts[1] == "Eternal Goal")
+            if (parts[0] == "Eternal Goal")
             {
                 EternalGoal eternalGoal = new EternalGoal();
-                eternalGoal.SetGoalNameFromFile(parts[1]);
-                eternalGoal.SetDescriptionFromFile(parts[2]);
-                eternalGoal.SetPointsFromFile(int.Parse(parts[3]));
-                eternalGoal.GetTimesCompletedFromFile(int.Parse(parts[4]));
+                eternalGoal.SetGoalNameFromFile(parts[2]);
+                eternalGoal.SetDescriptionFromFile(parts[3]);
+                eternalGoal.SetPointsFromFile(int.Parse(parts[4]));
+                eternalGoal.GetTimesCompletedFromFile(int.Parse(parts[5]));
                 GoalsList.Add(eternalGoal);
                 
             }
 
-            // string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetTimesCompleted()}";
+            // string stringToSave = $"Eternal Goal#{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetTimesCompleted()}#";
 
 
-            if (parts[1] == "CheckList Goal")
+            if (parts[0] == "CheckList Goal")
             {
                 CheckListGoal checkListGoalGoal = new CheckListGoal();
-                checkListGoalGoal.SetGoalNameFromFile(parts[1]);
-                checkListGoalGoal.SetDescriptionFromFile(parts[2]);
-                checkListGoalGoal.SetPointsFromFile(int.Parse(parts[3]));
-                checkListGoalGoal.GetBonusPointsFromFile(int.Parse(parts[4]));
-                checkListGoalGoal.GetTimesCompletedFromFile(int.Parse(parts[5]));
-                checkListGoalGoal.GetCompletionsNeededFromFile(int.Parse(parts[6]));
+                checkListGoalGoal.SetGoalNameFromFile(parts[2]);
+                checkListGoalGoal.SetDescriptionFromFile(parts[3]);
+                checkListGoalGoal.SetPointsFromFile(int.Parse(parts[4]));
+                checkListGoalGoal.GetBonusPointsFromFile(int.Parse(parts[5]));
+                checkListGoalGoal.GetTimesCompletedFromFile(int.Parse(parts[6]));
+                checkListGoalGoal.GetCompletionsNeededFromFile(int.Parse(parts[7]));
             
-                if (parts[7] == "false")
+                if (parts[8] == "False")
                 {
                     checkListGoalGoal.SetStatus(false);
                 }
@@ -119,7 +119,7 @@ public void ReadFromFile()
             
             }
 
-            // string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetBonusPoints()}#{GetTimesCompleted()}#{GetCompletionsNeeded()}#{GetStatus()}";
+            // string stringToSave = $"CheckList Goal#{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetBonusPoints()}#{GetTimesCompleted()}#{GetCompletionsNeeded()}#{GetStatus()}";
 
 
 

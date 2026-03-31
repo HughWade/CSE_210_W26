@@ -25,7 +25,7 @@ public override void RecordEvent()
 
 public override string CreateFileSystemString()
     {
-        string stringToSave = $"{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetStatus()}";
+        string stringToSave = $"Simple Goal#{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetStatus()}";
         return stringToSave;
     }
 
