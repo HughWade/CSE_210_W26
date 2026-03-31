@@ -84,7 +84,7 @@ public void ReadFromFile()
 
             }
 
-            if (parts[0] == "Eternal Goal")
+            else if (parts[0] == "Eternal Goal")
             {
                 EternalGoal eternalGoal = new EternalGoal();
                 eternalGoal.SetGoalNameFromFile(parts[2]);
@@ -98,7 +98,7 @@ public void ReadFromFile()
             // string stringToSave = $"Eternal Goal#{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetTimesCompleted()}#";
 
 
-            if (parts[0] == "CheckList Goal")
+            else if (parts[0] == "CheckList Goal")
             {
                 CheckListGoal checkListGoalGoal = new CheckListGoal();
                 checkListGoalGoal.SetGoalNameFromFile(parts[2]);
@@ -118,13 +118,13 @@ public void ReadFromFile()
                 }
 
                 GoalsList.Add(checkListGoalGoal);
+            
+            }
 
-            if (parts[0] == "totalpoints")
+            else if (parts[0] == "totalpoints")
                 {
                     CalculateTotalPoints(int.Parse(parts[1]));
                 }
-            
-            }
 
             // string stringToSave = $"CheckList Goal#{CheckBoxDisplay()}#{GetGoalName()}#{GetDescription()}#{GetPoints()}#{GetBonusPoints()}#{GetTimesCompleted()}#{GetCompletionsNeeded()}#{GetStatus()}";
 
