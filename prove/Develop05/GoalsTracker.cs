@@ -22,16 +22,25 @@ class GoalsTracker
     {
         
         int numList = 1;
+        int goalsCompleted = 0;
         Console.WriteLine("\nGoals List:");
         
         foreach (Goal goal in GoalsList)
         {
             Console.Write($"{numList}. ");
             goal.DisplayGoal();
+            
+
+            if (goal.GetStatus() == true)
+            {
+                goalsCompleted += 1;
+            }
+
             numList += 1;
         }
 
         Console.WriteLine($"\nTotal Points: {GetTotalPoints()}");
+        Console.WriteLine($"You have completed {goalsCompleted}/{numList-1} goals."); 
     }
 
 public void WriteToFile()
