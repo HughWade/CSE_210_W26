@@ -27,7 +27,7 @@ public override void SetPoints()
     Console.Write("How many bonus points will be awarded\nwhen the checklist has been completed? ");
     _bonusPoints = int.Parse(Console.ReadLine());
 
-    Console.Write("How many times does the the goal need to be completed\nin order to complete the checklist? ");
+    Console.Write("How many times does the goal need to be completed\nin order to complete the checklist? ");
     _completionsNeeded = int.Parse(Console.ReadLine());
 
 }
