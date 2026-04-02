@@ -1,9 +1,18 @@
 class Order
 {
-    List<Product> productsList = new List<Product>();
+    private List<Product> productsList = new List<Product>();
     private int _oneTimeShipping;
+    private string packagingLabel;
+    private Customer _customer;
+    private Address _address;
 
-    Customer customer = new Customer();
+
+
+    public Order(Customer customer, Address address)
+    {
+        _customer = customer;
+        _address = address;
+    }
 
     public int GetTotalCostOfOrder()
     {
@@ -12,27 +21,37 @@ class Order
         {
             totalCost += product.GetTotalCost();
         }
-        if (customer.inUSA() == true)
+        if (_customer.inUSA() == true)
         {
             _oneTimeShipping = 5;
         }
-        if (customer.inUSA() == false)
+        if (_customer.inUSA() == false)
         {
             _oneTimeShipping = 35;
         }
+        totalCost += _oneTimeShipping;
         return totalCost;
     }
 
-public void PrintPackagingLabel()
-    {
+public string PackagingLabel()
+    { 
+      packagingLabel += "----------------------------------\nPackaging Label\n";
       foreach (Product product in productsList)
         {
-            Console.WriteLine($"{product.GetName()} - {product.GetProductID()}");
+            packagingLabel += $"{product.GetName()} - {product.GetProductID()}\n";
         }  
+
+        return packagingLabel;
     }
 
-public void PrintShippingLabel(Customer customer)
+public string ShippingLabel(Customer customer)
     {
-        Console.WriteLine($"{customer.GetName}\n{customer.GetAddress1().GetAddress2}");
+        return $"Shipping Label\n{customer.GetName()}\n{customer.GetAddress1().GetAddress2()}";
     }
+
+public void AddToList(Product product)
+    {
+        productsList.Add(product);
+    }
+
 }

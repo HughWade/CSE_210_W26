@@ -5,10 +5,18 @@ private string _name;
 
 private Address _address;
 
+public Customer()
+    {
+    }
+
+public Customer(string name, Address address)
+    {
+        _name = name; _address = address;
+    }
+
 public bool inUSA()
     {
-        bool toreturn = _address.inUSA();
-        return toreturn;
+        return _address.inUSA();
     }
 
 public string GetName()
