@@ -16,7 +16,7 @@ public string GetDate()
         return _date;
     }
 
-public int GetLengthOfActivity()
+public double GetLengthOfActivity()
     {
         return _lengthOfActivity; // this is in minutes
     }
@@ -44,7 +44,7 @@ public virtual string GetActivityType()
 
 public string GetSummary()
     {
-        return $"{GetDate()} {GetActivityType()} ({GetLengthOfActivity()} min) - Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile";
+        return $"{GetDate()} {GetActivityType()} ({GetLengthOfActivity()} min) - Distance {Math.Round(GetDistance(), 2)} miles, Speed {Math.Round(GetSpeed(), 2)} mph, Pace: {Math.Round(GetPace(), 2)} min per mile";
     }
 
 }

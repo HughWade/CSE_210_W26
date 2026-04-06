@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 class Cycling : Activity
 {
 
-private int _speed; // should be in miles per hour
+private double _speed; // should be in miles per hour
 
 
 public Cycling(string date, int length, int speed) : base(date, length)

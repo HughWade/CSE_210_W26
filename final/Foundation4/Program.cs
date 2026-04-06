@@ -14,6 +14,7 @@ class Program
     ListofActivities.Add(activity2);    
     ListofActivities.Add(activity3);
 
+    Console.WriteLine("- Activity Summary -");
     foreach (Activity activity in ListofActivities)
         {
             Console.WriteLine(activity.GetSummary());
