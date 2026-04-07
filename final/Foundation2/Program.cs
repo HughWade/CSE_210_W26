@@ -18,7 +18,7 @@ class Program
     Order1.AddToList(product13);
     Console.WriteLine(Order1.PackagingLabel());
     Console.WriteLine(Order1.ShippingLabel(customer1));
-    Console.WriteLine($"\nTotal Cost of Order - ${Order1.GetTotalCostOfOrder()}");
+    Console.WriteLine($"\nTotal Cost of Order - ${Order1.GetTotalCostOfOrder()}\nDay/Time of Order: {Order1.GetTimeOfOrder()}");
     Console.WriteLine("----------------------------------\n");
     
 
@@ -32,7 +32,7 @@ class Program
     Order2.AddToList(product23);
     Console.WriteLine(Order2.PackagingLabel());
     Console.WriteLine(Order2.ShippingLabel(customer1));
-    Console.WriteLine($"\nTotal Cost of Order - ${Order2.GetTotalCostOfOrder()}");
+    Console.WriteLine($"\nTotal Cost of Order - ${Order2.GetTotalCostOfOrder()}\nDay/Time of Order: {Order2.GetTimeOfOrder()}");
     Console.WriteLine("----------------------------------\n");
 
 
@@ -46,7 +46,7 @@ class Program
     Order3.AddToList(product33);
     Console.WriteLine(Order3.PackagingLabel());
     Console.WriteLine(Order3.ShippingLabel(customer1));
-    Console.WriteLine($"\nTotal Cost of Order - ${Order3.GetTotalCostOfOrder()}");
+    Console.WriteLine($"\nTotal Cost of Order - ${Order3.GetTotalCostOfOrder()}\nDay/Time of Order: {Order3.GetTimeOfOrder()}");
     Console.WriteLine("----------------------------------\n");
 
 

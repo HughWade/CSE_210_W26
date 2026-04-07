@@ -5,6 +5,7 @@ class Order
     private string packagingLabel;
     private Customer _customer;
     private Address _address;
+    private DateTime dateTime = DateTime.Now;
 
 
 
@@ -12,6 +13,11 @@ class Order
     {
         _customer = customer;
         _address = address;
+    }
+
+    public DateTime GetTimeOfOrder()
+    {
+        return dateTime;
     }
 
     public int GetTotalCostOfOrder()
@@ -38,7 +44,7 @@ public string PackagingLabel()
       packagingLabel += "----------------------------------\nPackaging Label\n";
       foreach (Product product in productsList)
         {
-            packagingLabel += $"{product.GetName()} - {product.GetProductID()}\n";
+            packagingLabel += $"{product.GetName()}({product.GetQuantity()}pcs) - {product.GetProductID()}\n";
         }  
 
         return packagingLabel;
