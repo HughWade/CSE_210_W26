@@ -13,6 +13,6 @@ public override string ReturnFullDetails()
 }
 public override string ReturnShortDescription()
     {
-        return $"\nSHORT DESCRIPTION\nEvent Type: Reception\nEvent Title: {GetEventTitle()}\nEvent Date: {GetEventDate()}";
+        return $"\nSHORT DESCRIPTION\nEvent Type: Reception\nEvent Title: {GetEventTitle()}\nEvent Date: {GetEventDate()}{GetStringForTime()}";
     }
 }

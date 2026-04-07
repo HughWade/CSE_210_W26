@@ -14,6 +14,6 @@ public override string ReturnFullDetails()
 }
 public override string ReturnShortDescription()
     {
-        return $"\nSHORT DESCRIPTION\nEvent Type: Lecture\nEvent Title: {GetEventTitle()}\nEvent Date: {GetEventDate()}";
+        return $"\nSHORT DESCRIPTION\nEvent Type: Lecture\nEvent Title: {GetEventTitle()}\nEvent Date: {GetEventDate()}{GetStringForTime()}";
     }
 }

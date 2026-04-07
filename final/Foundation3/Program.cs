@@ -3,7 +3,7 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
+    {   
         Address address1 = new Address("943 Slime Drive", "Montooza", "AL", "USA");
         Reception event1 = new Reception("hugh.jackman@gmail.com", "Ali Graduated!", "Come Celebrate Ali's Graduation with us!", "4/12/33", "5PM", address1);
         Console.WriteLine(event1.ReturnStandardDetails());
