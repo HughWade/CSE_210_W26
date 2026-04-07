@@ -6,9 +6,9 @@ class Program
     {
     List<Activity> ListofActivities = new List<Activity>();
 
-    Activity activity1 = new Cycling("05 Oct 2026", 70, 10);
-    Activity activity2 = new Running("28 Feb 2002", 90, 10);    
-    Activity activity3 = new Swimming("30 Nov 2023", 45, 20);
+    Activity activity1 = new Cycling("05 Oct 2026", 70, 300, 10);
+    Activity activity2 = new Running("28 Feb 2002", 90, 400, 10);    
+    Activity activity3 = new Swimming("30 Nov 2023", 45, 250, 20);
 
     ListofActivities.Add(activity1);
     ListofActivities.Add(activity2);    

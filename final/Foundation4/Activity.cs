@@ -5,10 +5,16 @@ class Activity
 
 private string _date;
 private int _lengthOfActivity;
+private int _caloriesBurned;
 
-public Activity(string date1, int length)
+public Activity(string date1, int length, int calories)
     {
-        _date = date1; _lengthOfActivity = length;
+        _date = date1; _lengthOfActivity = length; _caloriesBurned = calories;
+    }
+
+public int GetCaloriesBurned()
+    {
+        return _caloriesBurned;
     }
 
 public string GetDate()
@@ -44,7 +50,7 @@ public virtual string GetActivityType()
 
 public string GetSummary()
     {
-        return $"{GetDate()} {GetActivityType()} ({GetLengthOfActivity()} min) - Distance {Math.Round(GetDistance(), 2)} miles, Speed {Math.Round(GetSpeed(), 2)} mph, Pace: {Math.Round(GetPace(), 2)} min per mile";
+        return $"{GetDate()} {GetActivityType()} ({GetLengthOfActivity()} min) - Distance {Math.Round(GetDistance(), 2)} miles, Speed {Math.Round(GetSpeed(), 2)} mph, Pace: {Math.Round(GetPace(), 2)} min per mile, Calories Burned: {GetCaloriesBurned()}";
     }
 
 }

@@ -4,7 +4,7 @@ class Running : Activity
 private double _distance;
 
 
-public Running(string date, int length, double distance) : base(date, length)
+public Running(string date, int length, int calories, double distance) : base(date, length, calories)
     {
         _distance = distance;
     }

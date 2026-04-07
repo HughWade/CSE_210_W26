@@ -6,7 +6,7 @@ class Cycling : Activity
 private double _speed; // should be in miles per hour
 
 
-public Cycling(string date, int length, int speed) : base(date, length)
+public Cycling(string date, int length, int calories, int speed) : base(date, length, calories)
     {
         _speed = speed;
     }

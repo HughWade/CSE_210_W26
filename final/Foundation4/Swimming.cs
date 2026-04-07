@@ -4,7 +4,7 @@ class Swimming : Activity
 private int _lapNum;
 
 
-public Swimming(string date, int length, int lapnum) : base(date, length)
+public Swimming(string date, int length, int calories, int lapnum) : base(date, length, calories)
     {
         _lapNum = lapnum;
     }
